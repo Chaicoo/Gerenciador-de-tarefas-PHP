@@ -53,7 +53,17 @@ if(isset($_GET['clear'])){
                 echo "<ul>";
 
                 foreach($_SESSION['tasks'] as $key => $task){
-                    echo "<li>$task</li>";
+                    echo "<li>
+                    <span>$task</span>
+                    <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
+                        <script>
+                            function deletar$key(){
+                                if(confirm('Confirmar remoção?')){
+                                    window.location = 'http://localhost:8100/?key=$key';
+                                }
+                            }
+                        </script>
+                    </li>";
                 }
 
                 echo "</ul>";
