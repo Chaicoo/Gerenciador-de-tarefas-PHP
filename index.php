@@ -59,7 +59,7 @@ if(isset($_GET['clear'])){
                         <script>
                             function deletar$key(){
                                 if(confirm('Confirmar remoção?')){
-                                    window.location = 'https://vercel.com/chico06/gerenciador-de-tarefas-php/?key=$key';
+                                    window.location = 'http://gerenciador-de-tarefas-php.vercel.app//?key=$key';
                                 }
                             }
                         </script>
