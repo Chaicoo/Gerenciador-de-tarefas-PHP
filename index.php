@@ -6,14 +6,7 @@ if(!isset($_SESSION['tasks'])){
     $_SESSION['tasks'] = array();
 }
 
-
-
-if(isset($_GET['clear'])){
-    unset($_SESSION['task']);
-    unset($_GET['clear']);
-}
-
-
+var_dump($_SESSION['tasks']);
 
 ?>
 
@@ -36,7 +29,7 @@ if(isset($_GET['clear'])){
         <h1>Gerenciador de tarefas PHP</h1>
     </dic>
     <div class="form">
-        <form action="task.php" method="post">
+        <form action="task.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="insert" value="insert">
             <label for="task_name">Tarefa: </label>
             <input type="text" name="task_name" placeholder="Nome da tarefa">
@@ -44,7 +37,9 @@ if(isset($_GET['clear'])){
             <input type="text" name="task_description" placeholder="Descrição da tarefa">
             <label for="task_date">Data:</label>
             <input type="date" name="task_date">
-            <button type="submit">Cadastrar</button>
+            <label for="task_image">Imagem:</label>
+            <input type="file" name="task_image">
+            <button type="submit">Salvar tarefa</button>
         </form>
         <?php
             if(isset($_SESSION['message'])){
@@ -63,7 +58,7 @@ if(isset($_GET['clear'])){
 
                 foreach($_SESSION['tasks'] as $key => $task){
                     echo "<li>
-                    <span>" . $task['task_name'] . "</span>
+                    <a href='details.php?key=$key'>" . $task['task_name'] . "</a>
                     <button type='button' class='btn-clear' onclick='deletar$key()'>Remover</button>
                         <script>
                             function deletar$key(){
@@ -79,10 +74,7 @@ if(isset($_GET['clear'])){
                 echo "</ul>";
             }
         ?>
-        <form action="" method="get">
-            <input type="hidden" name="clear" value="clear">
-            <button type="submit" class="btn-clear">Apagar Tarefas</button>
-        </form>
+       
     </div>
 
     <div class="footer">
