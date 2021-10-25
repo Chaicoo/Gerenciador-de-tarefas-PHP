@@ -90,9 +90,12 @@ body{
 }
 .btn-clear{
     background: #17A589;
-    padding: 12px;
-    color: #fff;
+    height: 32px;
     border: none;
+    border-radius: 4px;
+    padding: 0 12px;
+    color: #fff;
+    
     transition: background 0.4s;
 }
 .btn-clear:hover{
