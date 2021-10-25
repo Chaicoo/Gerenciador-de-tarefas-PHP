@@ -68,7 +68,7 @@ if(isset($_GET['clear'])){
                         <script>
                             function deletar$key(){
                                 if(confirm('Confirmar remoção?')){
-                                    window.location = 'http://localhost:8100/task.php?key=$key';
+                                    window.location = 'gerenciador-de-tarefas-php.vercel.app/task.php?key=$key';
                                 }
                                 return false
                             }
