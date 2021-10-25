@@ -7,14 +7,23 @@ if(!isset($_SESSION['tasks'])){
 }
 
 if(isset($_GET['task_name'])){
-    array_push($_SESSION['tasks'], $_GET['task_name']);
-    unset($_GET['task_name']);
-}
+    if($_GET['task_name'] != ""){
+        array_push($_SESSION['tasks'], $_GET['task_name']);
+        unset($_GET['task_name']);
+    }
+        else{
+           $_SESSION['O nome da tarefa não pode ser vazio'];
+        }
+} 
 
 if(isset($_GET['clear'])){
     unset($_SESSION['task']);
 }
 
+if(isset($_GET['key'])){
+    array_splice($_SESSION['tasks'], $_GET['key'], 1);
+    unset($_GET['key']);
+}
 
 ?>
 
@@ -42,10 +51,15 @@ if(isset($_GET['clear'])){
                 <input type="text" name="task_name" placeholder="Nome da tarefa">
                     <button type="submit">Cadastrar</button>
         </form>
+        <?php
+            if(isset($_SESSION['message'])){
+                echo "<p style='color: #17A589';>" . $_SESSION['message'] . "</p>";
+                unset($_SESSION['message']);
+            }
+        ?>
     </div>
-    <div class="separator">
 
-    </div>
+    <div class="separator"></div>
 
     <div class="list-task">
         <?php
