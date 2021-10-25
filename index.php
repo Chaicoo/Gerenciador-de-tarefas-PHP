@@ -15,6 +15,10 @@ if(isset($_GET['clear'])){
     unset($_SESSION['task']);
 }
 
+if(isset($_GET['key'])){
+    array_splice($_SESSION['tasks'], $_GET['key'], 1);
+    unset($_GET['key']);
+}
 
 ?>
 
