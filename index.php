@@ -63,7 +63,7 @@ var_dump($_SESSION['tasks']);
                         <script>
                             function deletar$key(){
                                 if(confirm('Confirmar remoção?')){
-                                    window.location = 'http://localhost:8100/task.php?key=$key';
+                                    window.location = 'https://chaicoo.github.io/Gerenciador-de-tarefas-PHP/task.php?key=$key';
                                 }
                                 return false
                             }
