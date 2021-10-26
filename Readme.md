@@ -5,9 +5,8 @@ Projeto de um app que registra tarefas numa lista, armazenando um nome para a ta
   <h1>Tela inicial</h1>
 </div>
 <div align="center">
-  <img height="160em" src="https://github.com/Chaicoo/Gerenciador-de-tarefas-PHP/blob/main/printscreens/Screenshot_1.png"/>
-   <img height="160em" src="https://github.com/Chaicoo/Gerenciador-de-tarefas-PHP/blob/main/printscreens/Screenshot_2.png"/>
   <img height="160em" src="https://github.com/Chaicoo/Gerenciador-de-tarefas-PHP/blob/main/printscreens/Screenshot_3.png"/>
+   <img height="160em" src="https://github.com/Chaicoo/Gerenciador-de-tarefas-PHP/blob/main/printscreens/Screenshot_2.png"/>
   <img height="160em" src="https://github.com/Chaicoo/Gerenciador-de-tarefas-PHP/blob/main/printscreens/Screenshot_4.png"/>
 </div>
 <div align="center">
